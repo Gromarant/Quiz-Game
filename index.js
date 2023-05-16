@@ -51,3 +51,48 @@ let questions = [
     ]
   },
 ];
+
+function getAnswerNode(answer) {
+  const label = document.createElement('label');
+  label.setAttribute('for', answer.for);
+  label.textContent = answer.text;
+
+  const input = document.createElement('input');
+  input.setAttribute('id', answer.for);
+  input.setAttribute('type', 'radio');
+  input.setAttribute('name', answer.nameAttribute);
+  input.setAttribute('value', answer.text);
+
+  label.appendChild(input);
+
+  return label;
+}
+
+function getQuestionNode(question) {
+  const container = document.createElement('fieldset');
+  const legend = document.createElement('legend');
+  legend.textContent = question.statement
+  container.appendChild(legend);
+
+  const section = document.createElement('section');
+  container.appendChild(section);
+  
+  question.answers.forEach(answer => {
+    const answerNode = getAnswerNode(answer);
+    section.appendChild(answerNode);
+  });
+
+  return container;
+}
+
+function setQuizQuestions(questions) {
+  const form = document.querySelector('.questionsForm');
+  const submitBtn = document.querySelector('.submitBtn');
+
+  questions.forEach(question => {
+    const questionNode = getQuestionNode(question);
+    form.insertBefore(questionNode, submitBtn);
+  });
+}
+
+setQuizQuestions(questions);
