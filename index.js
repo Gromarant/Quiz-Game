@@ -1,4 +1,4 @@
-let questions = [
+let questionsData = [
   {
     statement: 'Pregunta1',
     answers: [
@@ -80,6 +80,7 @@ function getQuestionNode(question) {
   question.answers.forEach(answer => {
     const setAnswerValid = () => {
       question.validAnswerSelected = answer.correct;
+
       section.querySelectorAll('label').forEach(label => {
         if (label.querySelector('input').checked) {
           label.classList.add('selected');
@@ -104,6 +105,12 @@ function setQuizQuestions(questions) {
     const questionNode = getQuestionNode(question);
     form.insertBefore(questionNode, submitBtn);
   });
-}
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const score = questions.filter(question => question.validAnswerSelected).length;
+    const maxScore = questions.length;
+    alert(`tu puntaje es de: ${score}/${maxScore}`);
+  })
 
-setQuizQuestions(questions);
+}
+setQuizQuestions(questionsData);
