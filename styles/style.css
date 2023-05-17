@@ -9,13 +9,13 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-size: 62.5%;
   font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   background-color: var(--page-bg);
   text-align: center;
 }
+
 header {
   display: flex;
   flex-direction: column;
@@ -26,7 +26,6 @@ header {
   border-radius: 0 0 1.6rem 1.6rem;
   box-shadow: #0000000f 2px 4px 6px 2px inset;
 }
-
 fieldset {
   border: none;
 }
@@ -34,21 +33,27 @@ input[type="radio"] {
   display: none;
 }
 legend {
-  font-size: 1.2rem;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #DD6969;
-  min-height: 8rem;
+  min-height: 9rem;
 }
 section {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 section label {
-  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 500;
   color: #F8FFE5;
   min-height: 6rem;
 }
-
 .selected {
   box-shadow: #32325d60 40px 30px 40px -12px inset;
   border: 0.1rem solid rgb(87, 87, 90);
@@ -65,6 +70,19 @@ section label {
 .answerFour {
   background-color: #FFC43D;
 }
+
+.submitBtn {
+  margin: 4rem;
+  font-size: 1.2rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* .press {
+  box-shadow: none;
+  background-color: #b5b5b5;
+} */
 
 footer {
   display: flex;
@@ -89,4 +107,21 @@ footer {
 .arrow_up {
   color: #228d9a;
   margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  fieldset {
+    height: 70vh;
+  }
+  section {
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 2rem;
+    margin: 0 1rem;
+  }
+  section label {
+    margin: 0 auto;
+    width: 47.5%;
+  }
 }

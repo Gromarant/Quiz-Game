@@ -27,7 +27,7 @@ let questionsData = [
     ]
   }, 
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta4',
     answers: [
       { text: 'respuesta1', for: 'q4AnswerOne', nameAttribute: 'questionFour', correct: true },
       { text: 'respuesta2', for: 'q4AnswerTwo', nameAttribute: 'questionFour', correct: false },
@@ -36,7 +36,7 @@ let questionsData = [
     ]
   }, 
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta5',
     answers: [
       { text: 'respuesta1', for: 'q5AnswerOne', nameAttribute: 'questionFive', correct: true },
       { text: 'respuesta2', for: 'q5AnswerTwo', nameAttribute: 'questionFive', correct: false },
@@ -45,7 +45,7 @@ let questionsData = [
     ]
   }, 
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta6',
     answers: [
       { text: 'respuesta1', for: 'q6AnswerOne', nameAttribute: 'questionSix', correct: true },
       { text: 'respuesta2', for: 'q6AnswerTwo', nameAttribute: 'questionSix', correct: false },
@@ -54,7 +54,7 @@ let questionsData = [
     ]
   },
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta7',
     answers: [
       { text: 'respuesta1', for: 'q7AnswerOne', nameAttribute: 'questionSix', correct: true },
       { text: 'respuesta2', for: 'q7AnswerTwo', nameAttribute: 'questionSix', correct: false },
@@ -63,7 +63,7 @@ let questionsData = [
     ]
   },
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta8',
     answers: [
       { text: 'respuesta1', for: 'q8AnswerOne', nameAttribute: 'questionSix', correct: true },
       { text: 'respuesta2', for: 'q8AnswerTwo', nameAttribute: 'questionSix', correct: false },
@@ -72,7 +72,7 @@ let questionsData = [
     ]
   },
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta9',
     answers: [
       { text: 'respuesta1', for: 'q9AnswerOne', nameAttribute: 'questionSix', correct: true },
       { text: 'respuesta2', for: 'q9AnswerTwo', nameAttribute: 'questionSix', correct: false },
@@ -81,7 +81,7 @@ let questionsData = [
     ]
   },
   {
-    statement: 'Pregunta2',
+    statement: 'Pregunta10',
     answers: [
       { text: 'respuesta1', for: 'q10AnswerOne', nameAttribute: 'questionSix', correct: true },
       { text: 'respuesta2', for: 'q10AnswerTwo', nameAttribute: 'questionSix', correct: false },
@@ -149,9 +149,10 @@ function setQuizQuestions(questions) {
   });
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    submitBtn.classList.add('press');
+    setTimeout("location.href = '../pages/results.html';",300);
     const score = questions.filter(question => question.validAnswerSelected).length;
     const maxScore = questions.length;
-    alert(`tu puntaje es de: ${score}/${maxScore}`);
   })
 
 }
