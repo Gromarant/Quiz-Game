@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --page-bg:#F8FFE5;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--page-bg);
+  text-align: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #909091;
+  background-color: #f1efef;
+  min-height: 6rem;
+  border-radius: 0 0 1.6rem 1.6rem;
+  box-shadow: #0000000f 2px 4px 6px 2px inset;
+}
+
+fieldset {
+  border: none;
+}
+input[type="radio"] {
+  display: none;
+}
+legend {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #DD6969;
+  min-height: 8rem;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+section label {
+  font-size: 1.1rem;
+  color: #F8FFE5;
+  min-height: 6rem;
+}
+
+.selected {
+  box-shadow: #32325d60 40px 30px 40px -12px inset;
+  border: 0.1rem solid rgb(87, 87, 90);
+}
+.answerOne {
+  background-color: #06D6A0;
+}
+.answerTwo {
+  background-color: #1B9AAA;
+}
+.answerThree {
+  background-color: #EF476F;
+}
+.answerFour {
+  background-color: #FFC43D;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  gap: 0.5rem;
+  background-color: #f1efef;
+  padding: 0 1.6rem;
+  border-radius: 1.6rem 1.6rem 0 0;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  min-height: 6rem;
+}
+.footer__logo {
+  width: 4.8rem;
+}
+.copy-right {
+  font-size: 1.1rem;
+}
+.arrow_up {
+  color: #228d9a;
+  margin: 1rem;
+}
