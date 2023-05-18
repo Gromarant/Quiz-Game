@@ -64,9 +64,9 @@ Contributions are welcome. If you find any bugs or have any improvements, feel f
 This project is distributed under the **MIT License**. You can refer to the [LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) file for more details.
 
 ---
+[<img align="left"  height="64" src="/assets/images/logo-short-medium-2023.png">](https://www.gromarant.com/)
 [© 2023 Mariangelica Rodriguez.](https://www.linkedin.com/in/mariangelica-rodr%C3%ADguez-p%C3%A9rez/) All rights reserved.
-<br>
-[<img align="right" width="208" height="64" src="/assets/images/logo-short-medium-2023.png">](https://www.gromarant.com/)
 
+<br>
 
 ***
