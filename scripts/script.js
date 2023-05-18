@@ -1,92 +1,97 @@
 let questionsData = [
   {
-    statement: 'Pregunta1',
+    statement: '¿Cuál de las siguientes opciones sobre las funciones de JavaScript es correcta?',
     answers: [
-      { text: 'respuesta1', for: 'q1AnswerOne', nameAttribute: 'questionOne', correct: true },
-      { text: 'respuesta2', for: 'q1AnswerTwo', nameAttribute: 'questionOne', correct: false },
-      { text: 'respuesta3', for: 'q1AnswerThree', nameAttribute: 'questionOne', correct: false },
-      { text: 'respuesta4', for: 'q1Answerfour', nameAttribute: 'questionOne', correct: false },
+      { text: 'JavaScript es complementario e integrado con HTML', for: 'q1AnswerOne', nameAttribute: 'questionOne', correct: false },
+      { text: 'JavaScript es abierto y multiplataforma', for: 'q1AnswerTwo', nameAttribute: 'questionOne', correct: false },
+      { text: 'Las dos anteriores', for: 'q1AnswerThree', nameAttribute: 'questionOne', correct: true},
+      { text: 'Ninguna de las anteriores', for: 'q1Answerfour', nameAttribute: 'questionOne', correct: false },
     ]
   },
   {
-    statement: 'Pregunta2',
+    statement: '¿Qué método devuelve los caracteres de una cadena que comienza en la ubicación especificada?',
     answers: [
-      { text: 'respuesta1', for: 'q2AnswerOne', nameAttribute: 'questionTwo', correct: true },
-      { text: 'respuesta2', for: 'q2AnswerTwo', nameAttribute: 'questionTwo', correct: false },
-      { text: 'respuesta3', for: 'q2AnswerThree', nameAttribute: 'questionTwo', correct: false },
-      { text: 'respuesta4', for: 'q2Answerfour', nameAttribute: 'questionTwo', correct: false },
+      { text: 'substr()', for: 'q2AnswerOne', nameAttribute: 'questionTwo', correct: true },
+      { text: 'getSubstring()', for: 'q2AnswerTwo', nameAttribute: 'questionTwo', correct: false },
+      { text: 'slice()', for: 'q2AnswerThree', nameAttribute: 'questionTwo', correct: false },
+      { text: 'None of the above.', for: 'q2Answerfour', nameAttribute: 'questionTwo', correct: false },
     ]
   },
   {
-    statement: 'Pregunta3',
+    statement: '¿Cuál de las siguientes métodos de Number devuelve una versión de valor de cadena del número actual?',
     answers: [
-      { text: 'respuesta1', for: 'q3AnswerOne', nameAttribute: 'questionThree', correct: true },
-      { text: 'respuesta2', for: 'q3AnswerTwo', nameAttribute: 'questionThree', correct: false },
-      { text: 'respuesta3', for: 'q3AnswerThree', nameAttribute: 'questionThree', correct: false },
-      { text: 'respuesta4', for: 'q3Answerfour', nameAttribute: 'questionThree', correct: false },
+      { text: 'toString()', for: 'q3AnswerOne', nameAttribute: 'questionThree', correct: true },
+      { text: 'toFixed()', for: 'q3AnswerTwo', nameAttribute: 'questionThree', correct: false },
+      { text: 'toLocaleString()', for: 'q3AnswerThree', nameAttribute: 'questionThree', correct: false },
+      { text: 'toPrecision()', for: 'q3Answerfour', nameAttribute: 'questionThree', correct: false },
     ]
   }, 
   {
-    statement: 'Pregunta4',
+    statement: '¿Cuál de los siguientes NO es un tipo de datos primitivo en JavaScript?',
     answers: [
-      { text: 'respuesta1', for: 'q4AnswerOne', nameAttribute: 'questionFour', correct: true },
-      { text: 'respuesta2', for: 'q4AnswerTwo', nameAttribute: 'questionFour', correct: false },
-      { text: 'respuesta3', for: 'q4AnswerThree', nameAttribute: 'questionFour', correct: false },
-      { text: 'respuesta4', for: 'q4Answerfour', nameAttribute: 'questionFour', correct: false },
+      { text: 'Number', for: 'q4AnswerOne', nameAttribute: 'questionFour', correct: false },
+      { text: 'String', for: 'q4AnswerTwo', nameAttribute: 'questionFour', correct: false },
+      { text: 'Boolean', for: 'q4AnswerThree', nameAttribute: 'questionFour', correct: false },
+      { text: 'Object', for: 'q4Answerfour', nameAttribute: 'questionFour', correct: true },
     ]
   }, 
   {
-    statement: 'Pregunta5',
+    statement: '¿Qué hace el operador "typeof" en JavaScript?',
     answers: [
-      { text: 'respuesta1', for: 'q5AnswerOne', nameAttribute: 'questionFive', correct: true },
-      { text: 'respuesta2', for: 'q5AnswerTwo', nameAttribute: 'questionFive', correct: false },
-      { text: 'respuesta3', for: 'q5AnswerThree', nameAttribute: 'questionFive', correct: false },
-      { text: 'respuesta4', for: 'q5Answerfour', nameAttribute: 'questionFive', correct: false },
+      { text: 'Devuelve el tipo de dato de una variable', for: 'q5AnswerOne', nameAttribute: 'questionFive', correct: true },
+      { text: 'Comprueba si una variable está definida', for: 'q5AnswerTwo', nameAttribute: 'questionFive', correct: false },
+      { text: 'Asigna un valor a una variable', for: 'q5AnswerThree', nameAttribute: 'questionFive', correct: false },
+      { text: 'Concatena dos cadenas', for: 'q5Answerfour', nameAttribute: 'questionFive', correct: false },
     ]
   }, 
   {
-    statement: 'Pregunta6',
+    statement: 'Cuál es la salida del siguiente código: consola.log(2 + “2”);',
     answers: [
-      { text: 'respuesta1', for: 'q6AnswerOne', nameAttribute: 'questionSix', correct: true },
-      { text: 'respuesta2', for: 'q6AnswerTwo', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta3', for: 'q6AnswerThree', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta4', for: 'q6Answerfour', nameAttribute: 'questionSix', correct: false },
+      { text: '“4”', for: 'q6AnswerTwo', nameAttribute: 'questionSix', correct: false },
+      { text: '"22"', for: 'q6AnswerOne', nameAttribute: 'questionSix', correct: true },
+      { text: '4', for: 'q6AnswerThree', nameAttribute: 'questionSix', correct: false },
+      { text: '22', for: 'q6Answerfour', nameAttribute: 'questionSix', correct: false },
     ]
   },
   {
-    statement: 'Pregunta7',
+    statement: '¿Cuál de los siguientes NO es un operador de comparación en JavaScript?',
     answers: [
-      { text: 'respuesta1', for: 'q7AnswerOne', nameAttribute: 'questionSix', correct: true },
-      { text: 'respuesta2', for: 'q7AnswerTwo', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta3', for: 'q7AnswerThree', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta4', for: 'q7Answerfour', nameAttribute: 'questionSix', correct: false },
+      { text: '==', for: 'q7AnswerTwo', nameAttribute: 'questionSix', correct: false },
+      { text: '!=', for: 'q7AnswerThree', nameAttribute: 'questionSix', correct: false },
+      { text: '=<', for: 'q7AnswerOne', nameAttribute: 'questionSix', correct: true },
+      { text: '===', for: 'q7Answerfour', nameAttribute: 'questionSix', correct: false },
     ]
   },
   {
-    statement: 'Pregunta8',
+    statement: `Cuál es el output del siguiente código: 
+    var x = verdadero;
+    console.log(!x);`,
     answers: [
-      { text: 'respuesta1', for: 'q8AnswerOne', nameAttribute: 'questionSix', correct: true },
-      { text: 'respuesta2', for: 'q8AnswerTwo', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta3', for: 'q8AnswerThree', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta4', for: 'q8Answerfour', nameAttribute: 'questionSix', correct: false },
+      { text: 'true', for: 'q8AnswerTwo', nameAttribute: 'questionSix', correct: false },
+      { text: 'false', for: 'q8AnswerOne', nameAttribute: 'questionSix', correct: true },
+      { text: 'undefined', for: 'q8AnswerThree', nameAttribute: 'questionSix', correct: false },
+      { text: 'Error', for: 'q8Answerfour', nameAttribute: 'questionSix', correct: false },
     ]
   },
   {
-    statement: 'Pregunta9',
+    statement: `Cuál es el output del siguiente código: 
+    var x = 8;
+    var y = "8";
+    console.log(x == y);`,
     answers: [
-      { text: 'respuesta1', for: 'q9AnswerOne', nameAttribute: 'questionSix', correct: true },
-      { text: 'respuesta2', for: 'q9AnswerTwo', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta3', for: 'q9AnswerThree', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta4', for: 'q9Answerfour', nameAttribute: 'questionSix', correct: false },
+      { text: 'true', for: 'q9AnswerOne', nameAttribute: 'questionSix', correct: true },
+      { text: 'false', for: 'q9AnswerTwo', nameAttribute: 'questionSix', correct: false },
+      { text: 'undefined', for: 'q9AnswerThree', nameAttribute: 'questionSix', correct: false },
+      { text: 'Error', for: 'q9Answerfour', nameAttribute: 'questionSix', correct: false },
     ]
   },
   {
-    statement: 'Pregunta10',
+    statement: '¿Cuál es la forma correcta de declarar una variable en JavaScript?',
     answers: [
-      { text: 'respuesta1', for: 'q10AnswerOne', nameAttribute: 'questionSix', correct: true },
-      { text: 'respuesta2', for: 'q10AnswerTwo', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta3', for: 'q10AnswerThree', nameAttribute: 'questionSix', correct: false },
-      { text: 'respuesta4', for: 'q10Answerfour', nameAttribute: 'questionSix', correct: false },
+      { text: 'var x = 5;', for: 'q10AnswerOne', nameAttribute: 'questionSix', correct: false },
+      { text: 'variable x = 5;', for: 'q10AnswerTwo', nameAttribute: 'questionSix', correct: false },
+      { text: 'x = 5', for: 'q10AnswerThree', nameAttribute: 'questionSix', correct: false },
+      { text: 'let x = 5;', for: 'q10Answerfour', nameAttribute: 'questionSix', correct: true },
     ]
   },
 ];
@@ -107,14 +112,21 @@ const quizSections = {
 };
 
 document.querySelector('.makeQuizBtn').addEventListener('click', () => {
+  document.querySelector('.arrow_up').classList.remove('hidden');
   setSection(quizSections.quiz);
 });
 
 document.querySelector('.tryAgainBtn').addEventListener('click', () => {
+  document.querySelector('.arrow_up').classList.remove('hidden');
   setSection(quizSections.quiz);
 });
 
 document.querySelector('.homeBtn').addEventListener('click', () => {
+  document.querySelector('.arrow_up').classList.add('hidden');
+  setSection(quizSections.home);
+});
+document.querySelector('.footer__logo').addEventListener('click', () => {
+  document.querySelector('.arrow_up').classList.add('hidden');
   setSection(quizSections.home);
 });
 
@@ -176,7 +188,7 @@ function setQuizQuestions(questions) {
     e.preventDefault();
     const score = questions.filter(question => question.validAnswerSelected).length;
     const maxScore = questions.length;
-
+    document.querySelector('.arrow_up').classList.add('hidden');
     setScore(score, maxScore);
     setSection(quizSections.results);
   })
@@ -193,9 +205,9 @@ function setVisibleSection(targetSectionId) {
   sections.forEach(section => {
     const sectionNode = document.getElementById(section.id);
     if (section.id === targetSectionId) {
-      sectionNode.classList.remove('hidden')
+      sectionNode.classList.remove('hidden');
     } else {
-      sectionNode.classList.add('hidden')
+      sectionNode.classList.add('hidden');
     }
   })
 }
