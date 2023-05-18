@@ -91,6 +91,33 @@ let questionsData = [
   },
 ];
 
+const quizSections = {
+  home: {
+    title: 'Js sabe como rizar el rizo',
+    id: 'home',
+  },
+  quiz: {
+    title: 'Preparad@ para aprender más?',
+    id: 'quiz',
+  },
+  results: {
+    title: 'Aquí están tus resultados!!!',
+    id: 'score',
+  }
+};
+
+document.querySelector('.makeQuizBtn').addEventListener('click', () => {
+  setSection(quizSections.quiz);
+});
+
+document.querySelector('.tryAgainBtn').addEventListener('click', () => {
+  setSection(quizSections.quiz);
+});
+
+document.querySelector('.homeBtn').addEventListener('click', () => {
+  setSection(quizSections.home);
+});
+
 function getAnswerNode(answer, colorClass) {
   const label = document.createElement('label');
   label.setAttribute('for', answer.for);
@@ -132,10 +159,8 @@ function getQuestionNode(question) {
         }
       })
     }
-    
     answerNode.addEventListener('click', setAnswerValid);
   });
-
   return container;
 }
 
@@ -149,11 +174,42 @@ function setQuizQuestions(questions) {
   });
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    submitBtn.classList.add('press');
-    setTimeout("location.href = '../pages/results.html';",300);
     const score = questions.filter(question => question.validAnswerSelected).length;
     const maxScore = questions.length;
-  })
 
+    setScore(score, maxScore);
+    setSection(quizSections.results);
+  })
 }
+
+function setTitlePage(title) {
+  const h1 = document.querySelector('h1');
+  h1.innerHTML = title;
+}
+
+function setVisibleSection(targetSectionId) {
+  const sections = Object.values(quizSections);
+  
+  sections.forEach(section => {
+    const sectionNode = document.getElementById(section.id);
+    if (section.id === targetSectionId) {
+      sectionNode.classList.remove('hidden')
+    } else {
+      sectionNode.classList.add('hidden')
+    }
+  })
+}
+
+function setScore(score, total) {
+  const pointerNode = document.querySelector('#points');
+  pointerNode.textContent = `${score}/${total}`;
+}
+
+function setSection(section) {
+  setTitlePage(section.title);
+  setVisibleSection(section.id);
+}
+
+// Init
 setQuizQuestions(questionsData);
+setSection(quizSections.home);
