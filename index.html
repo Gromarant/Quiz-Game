@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/favicon-2023.png" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Quiz game-home</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Quiz game</title>
   </head>
   <body>
-    <header>
-      <h1>Preparad@ para aprender más?</h1>
+    <header id="up">
+      <h1 class="title"></h1>
     </header>
+    
+    <main>
+      <section id="home">
+        <h2>Mejora tus conocimientos en js</h2>
+        <p>Este quiz está diseñado para ayudarte a fijar conceptos de javascript, cada pregunta con 4 posibles respuesta, una única verdadera</p>
+        <button class="btn makeQuizBtn">Iniciar Quiz</button>
+      </section>
 
-    <main class="hero_home">
-
+      <form id="quiz" class="questionsForm">
+        <button type="submit" class="btn submitBtn">Terminar Quiz</button>
+      </form>
+      
+      <section id="score">
+        <article class="score_card">
+          <h2>Score</h2>
+          <p id="points"></p>
+        </article>
+        <button class="btn homeBtn">Home</button>
+        <button class="btn tryAgainBtn">Volver a intentarlo</button>
+      </section>
     </main>
 
     <footer>
-      <img class="footer__logo" src="./assets/images/logo-short-2023.png" alt="Gromarant copy right">
+      <img class="footer__logo" src="../assets/images/logo-short-2023.png" alt="Gromarant copy right">
       <p class="copy-right">&#169; Mariangelica Rodriguez</p>
-      <!-- <a href="./quiz.html"><span class="iconify arrow_up" data-icon="material-symbols:arrow-circle-up-rounded" data-width="48"></span></a> -->
+      <a rel="noopener" href="./index.html#up"><span class="iconify arrow_up" data-icon="material-symbols:arrow-circle-up-rounded" data-width="48"></span></a>
     </footer>
     <script src="./scripts/script.js"></script>
-    <!-- <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script> -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   </body>
 </html>
